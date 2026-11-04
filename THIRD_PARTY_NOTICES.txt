@@ -1,0 +1,20 @@
+暗渡 / Underpass
+
+本地构建包含此 Mac 已安装的 v2rayN 所附带的代理内核：
+
+sing-box 1.13.14
+项目与对应源码：https://github.com/SagerNet/sing-box/tree/v1.13.14
+许可：https://github.com/SagerNet/sing-box/blob/v1.13.14/LICENSE
+
+Xray 26.7.11
+项目与对应源码：https://github.com/XTLS/Xray-core/tree/v26.7.11
+许可：https://github.com/XTLS/Xray-core/blob/v26.7.11/LICENSE
+
+v2rayN 项目：https://github.com/2dust/v2rayN
+
+本应用是本地实验工具，不属于上述项目、QQ 音乐或 Bilibili 的官方产品。
+应用包不含用户的节点、订阅、账户凭据或生成的运行配置。
+
+Bilibili 域名清单参考 MetaCubeX/meta-rules-dat 的 bilibili geosite（2026-11-03 读取），仅选取网页/API/图片/视频相关条目：
+https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/bilibili.list
+规则维护项目与许可信息：https://github.com/MetaCubeX/meta-rules-dat

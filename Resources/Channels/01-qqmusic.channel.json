@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "com.qq.music",
+  "version": "1.0.0",
+  "name": "QQ 音乐",
+  "icon": "music.note",
+  "summary": "客户端及音乐相关域名",
+  "match": {
+    "domains": [],
+    "domainSuffixes": [
+      "qqmusic.qq.com",
+      "y.qq.com",
+      "qqmusic.com",
+      "qqmusic.gtimg.com",
+      "music.tc.qq.com"
+    ],
+    "processNames": [
+      "QQMusic",
+      "QQMusicHelper",
+      "QQMusic Helper"
+    ],
+    "applicationPaths": [
+      "/Applications/QQMusic.app"
+    ]
+  },
+  "dns": "node",
+  "entry": {
+    "kind": "application",
+    "value": "/Applications/QQMusic.app"
+  },
+  "tests": [
+    {
+      "name": "音乐网页",
+      "url": "https://y.qq.com/"
+    }
+  ],
+  "sources": [
+    "https://y.qq.com/"
+  ]
+}

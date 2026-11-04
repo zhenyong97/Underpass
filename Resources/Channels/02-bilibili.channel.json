@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "com.bilibili.web",
+  "version": "1.0.0",
+  "name": "Bilibili",
+  "icon": "play.rectangle",
+  "summary": "网页、视频、图片与接口",
+  "match": {
+    "domains": [
+      "upos-hz-mirrorakam.akamaized.net"
+    ],
+    "domainSuffixes": [
+      "bilibili.com",
+      "bilibili.cn",
+      "bilibili.net",
+      "bilibili.cc",
+      "biliapi.com",
+      "biliapi.net",
+      "biliimg.com",
+      "bilivideo.com",
+      "bilivideo.cn",
+      "bilivideo.net",
+      "hdslb.com",
+      "hdslb.org",
+      "acgvideo.com",
+      "acg.tv",
+      "b23.tv",
+      "bili22.cn",
+      "bili2233.cn",
+      "bili23.cn",
+      "bili33.cn",
+      "bilicdn1.com",
+      "bilicdn2.com",
+      "bilicdn3.com",
+      "bilicdn4.com",
+      "bilicdn5.com"
+    ],
+    "processNames": [],
+    "applicationPaths": []
+  },
+  "dns": "node",
+  "entry": {
+    "kind": "url",
+    "value": "https://www.bilibili.com/"
+  },
+  "tests": [
+    {
+      "name": "网页",
+      "url": "https://www.bilibili.com/"
+    },
+    {
+      "name": "接口",
+      "url": "https://api.bilibili.com/x/web-interface/nav"
+    }
+  ],
+  "sources": [
+    "https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/bilibili.list"
+  ]
+}

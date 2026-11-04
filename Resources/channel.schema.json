@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Underpass channel v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "version",
+    "name",
+    "icon",
+    "summary",
+    "match",
+    "dns",
+    "tests",
+    "sources"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]{2,95}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]{1,8}\\.[0-9]{1,8}\\.[0-9]{1,8}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "icon": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domains",
+        "domainSuffixes",
+        "processNames",
+        "applicationPaths"
+      ],
+      "properties": {
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4096
+        },
+        "domainSuffixes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4096
+        },
+        "processNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4096
+        },
+        "applicationPaths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4096
+        }
+      }
+    },
+    "dns": {
+      "enum": [
+        "node",
+        "system"
+      ]
+    },
+    "entry": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "value"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "url",
+                "application"
+              ]
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "tests": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://"
+      },
+      "maxItems": 16
+    }
+  },
+  "description": "Structural schema; runtime additionally validates scope, domain syntax, paths, HTTPS credentials, matching test hosts and aggregate rule limits. Duplicate rule entries are normalized."
+}
