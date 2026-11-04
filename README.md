@@ -71,13 +71,15 @@ zsh package.sh
 
 ## Git 使用
 
-这是本地仓库，尚未配置远程地址。常用命令：
+GitHub 仓库：[zhenyong97/Underpass](https://github.com/zhenyong97/Underpass)（私有）。本地 `origin` 指向该仓库，默认分支为 `main`。常用命令：
 
 ```sh
 git status
 git log --oneline --decorate
 git diff
 git switch -c feature/your-change
+git pull --ff-only
+git push
 ```
 
 需要取用某次提交的源码时，可使用独立目录，不必在当前工作目录保留整套副本：
