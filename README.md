@@ -71,7 +71,7 @@ zsh package.sh
 
 ## Git 使用
 
-GitHub 仓库：[zhenyong97/Underpass](https://github.com/zhenyong97/Underpass)（私有）。本地 `origin` 指向该仓库，默认分支为 `main`。常用命令：
+GitHub 仓库：[zhenyong97/Underpass](https://github.com/zhenyong97/Underpass)（公开）。本地 `origin` 指向该仓库，默认分支为 `main`。常用命令：
 
 ```sh
 git status
